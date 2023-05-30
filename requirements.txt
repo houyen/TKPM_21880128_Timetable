@@ -1,0 +1,9 @@
+django-choices~=1.7.2
+django-filter~=23.2
+django-cors-headers~=4.0.0
+djangorestframework~=3.14.0
+factory-boy~=3.2.1
+Django~=4.2.1
+xlrd~=2.0.1
+django-extensions~=3.2.1
+dj.choices~=0.11.0
