@@ -2,10 +2,11 @@
 TKPM_TX_HK2_2022.
 
 -----------------
-Môn học: THIẾT KẾ PHẦN MỀM
-MSSV: 21880128
-Đề tài: Timetable
-Ngôn ngữ sử dụng: Python
+* Môn học: THIẾT KẾ PHẦN MỀM 
+* MSSV: 21880128. 
+* Đề tài: Timetable
+* Framework: Django
+* Ngôn ngữ sử dụng: Python
 
 ### Mô tả phần mềm:
   Trường học có nhiều lớp, lớp học và giáo viên. Việc tạo lịch giảng dạy cho từng giáo viên vào các lớp và các tiết học 1 cách thủ công rất dài.
