@@ -17,9 +17,6 @@ TKPM_TX_HK2_2022.
 ### Hướng dẫn cài đặt
 * Install Python >= 3.8 on your Computer from the official website.
 
-* Install Django on your computer by running this command
-    pip install Django(For windows)
-    python -m pip install Django(For Mac/Linux)
 
 * Run this command on your git terminal
     git clone “https://github.com/houyen/TKPM_21880128_Timetable.git”
@@ -28,5 +25,13 @@ TKPM_TX_HK2_2022.
     pip install -r requirements.txt
 
 * Run this command to run server on your localhost:8000
-    python manage.py runserver
-    python manage.py runserver <Tên Cổng>
+    python manage.py runserver 
+    python manage.py runserver <Port>
+
+* Create DataBase
+    python manage.py makemigrations
+    python manage.py migrate
+
+* Load data test
+    python manage.py loaddata schools/fixtures/cms.json
+    python manage.py loaddata classrooms/fixtures/cms.json
