@@ -19,7 +19,7 @@ TKPM_TX_HK2_2022.
 
 
 * Run this command on your git terminal
-    **git clone “https://github.com/houyen/TKPM_21880128_Timetable.git”
+    git clone “https://github.com/houyen/TKPM_21880128_Timetable.git”
 
 * Install dependencies by running this command
     pip install -r requirements.txt
