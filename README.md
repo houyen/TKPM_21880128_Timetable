@@ -18,21 +18,21 @@ TKPM_TX_HK2_2022.
 * Install Python >= 3.8 on your Computer from the official website.
 
 
-* Run this command on your git terminal
+* Run this command on your git terminal: 
     git clone “https://github.com/houyen/TKPM_21880128_Timetable.git”
 
-* Install dependencies by running this command
+* Install dependencies by running this command: 
     pip install -r requirements.txt
 
-* Run this command to run server on your localhost:8000
-    python manage.py runserver 
+* Run this command to run server on your localhost:8000: 
+    python manage.py runserver /
     python manage.py runserver <Port> # Nếu trường hợp trùng port đã sử dụng
 
-* Create DataBase
-    python manage.py makemigrations
+* Create DataBase: 
+    python manage.py makemigrations /
     python manage.py migrate
 
-* Load data test
+* Load data test: 
     python manage.py loaddata schools/fixtures/cms.json
     python manage.py loaddata classrooms/fixtures/cms.json
 
