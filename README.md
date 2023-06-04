@@ -10,8 +10,8 @@ TKPM_TX_HK2_2022.
 
 ### Mô tả phần mềm:
   Việc tạo lịch giảng dạy cho từng giáo viên vào các lớp và các tiết học 1 cách thủ công rất dài.
-  Chương trình này chạy một hệ thống quản lý thời khóa biểu cho một trường học. Nó có thể phân bổ giáo viên trong các khoảng thời gian rảnh tùy theo môn học ưu tiên của giáo viên, ví dụ (nếu giáo viên toán vắng mặt, hệ thống này sẽ chỉ chỉ định giáo viên toán nếu có trong danh sách giáo viên rảnh) Nó có thể tìm ra các môn học được dạy bởi giáo viên vắng mặt. 
-  
+  Chương trình này chạy một hệ thống quản lý thời khóa biểu cho một trường học.   Trình quản lý thời khóa biểu sẽ giúp bạn chỉ định giáo viên cho một lớp nếu giáo viên được chỉ định không có mặt, ví dụ (nếu giáo viên toán vắng mặt, hệ thống này sẽ chỉ chỉ định giáo viên toán nếu có trong danh sách giáo viên rảnh)
+
   Cũng có thể phân bổ giáo viên theo cách thủ công. Cũng cung cấp tùy chọn cho giáo viên, cho chủ đề cụ thể được giảng dạy. Cung cấp danh sách các giáo viên miễn phí có sẵn trong thời gian cụ thể.
 
 ### Hướng dẫn cài đặt
@@ -26,7 +26,7 @@ TKPM_TX_HK2_2022.
 
 * Run this command to run server on your localhost:8000
     python manage.py runserver 
-    python manage.py runserver <Port>
+    python manage.py runserver <Port> # Nếu trường hợp trùng port đã sử dụng
 
 * Create DataBase
     python manage.py makemigrations
@@ -35,3 +35,5 @@ TKPM_TX_HK2_2022.
 * Load data test
     python manage.py loaddata schools/fixtures/cms.json
     python manage.py loaddata classrooms/fixtures/cms.json
+
+
