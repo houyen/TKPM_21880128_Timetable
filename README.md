@@ -25,12 +25,12 @@ TKPM_TX_HK2_2022.
     pip install -r requirements.txt
 
 * Create DataBase
-    python manage.py makemigrations <model>
+    python manage.py makemigrations _model
     python manage.py migrate
 
 * Run this command to run server on your localhost:8000
     python manage.py runserver 
-    python manage.py runserver <Port> # Nếu trường hợp trùng port đã sử dụng
+    python manage.py runserver _port # Nếu trường hợp trùng port đã sử dụng
 
 * Load data test
     python manage.py loaddata schools/fixtures/cms.json
