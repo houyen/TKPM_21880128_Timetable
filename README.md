@@ -24,16 +24,14 @@ TKPM_TX_HK2_2022.
 * Install dependencies by running this command: 
     pip install -r requirements.txt
 
-* Run this command to run server on your localhost:8000: 
-    python manage.py runserver /
-    python manage.py runserver <Port> # Nếu trường hợp trùng port đã sử dụng
-
-* Create DataBase: 
-    python manage.py makemigrations /
+* Create DataBase
+    python manage.py makemigrations <model>
     python manage.py migrate
 
-* Load data test: 
+* Run this command to run server on your localhost:8000
+    python manage.py runserver 
+    python manage.py runserver <Port> # Nếu trường hợp trùng port đã sử dụng
+
+* Load data test
     python manage.py loaddata schools/fixtures/cms.json
     python manage.py loaddata classrooms/fixtures/cms.json
-
-

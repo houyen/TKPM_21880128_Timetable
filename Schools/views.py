@@ -1,9 +1,16 @@
 from django_filters import rest_framework as filters
 from rest_framework.viewsets import ModelViewSet
 
-from schools.models import Teacher
-from schools.serializers import TeacherSerializer
+from schools.models import Teacher, School
+from schools.serializers import TeacherSerializer, SchoolSerializer
 
+
+class SchoolViewSet(ModelViewSet):
+    queryset = School.objects.all()
+    serializer_class = SchoolSerializer
+    
+    def get_queryset(self):
+        pass
 
 class TeacherFilter(filters.FilterSet):
     class Meta:
@@ -23,4 +30,7 @@ class TeacherViewSet(ModelViewSet):
     filterset_class = TeacherFilter
 
     def get_queryset(self):
-        return self.queryset.filter(school=self.request.school)
+        pass
+        # return self.queryset.filter(school=self.request.school)
+    
+

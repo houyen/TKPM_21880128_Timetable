@@ -7,12 +7,8 @@ from utils.model_query_templates import LogicalDeleteQuerySet
 
 
 class LogicalDeletedManager(models.Manager):
-    """
-    A manager that serves as the default manager for `pinax.models.LogicalDeleteModel`
-    providing the filtering out of logically deleted objects. In addition, it
-    provides named querysets for getting the deleted objects.
-    """
-
+    
+    
     def get_queryset(self):
         if self.model:
             return LogicalDeleteQuerySet(self.model, using=self._db).filter(

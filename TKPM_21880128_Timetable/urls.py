@@ -25,11 +25,12 @@ from classrooms.views import (
     SubjectViewSet,
     PeriodAdjustmentViewSet,
 )
-from schools.views import TeacherViewSet
+from schools.views import (TeacherViewSet, SchoolViewSet)
 from users.views import UserViewSet
 
 router = routers.DefaultRouter()
 router.register(r"users", UserViewSet)
+router.register(r"schools", SchoolViewSet)
 router.register(r"classrooms", ClassRoomViewSet)
 router.register(r"teachers", TeacherViewSet)
 router.register(r"subjects", SubjectViewSet)

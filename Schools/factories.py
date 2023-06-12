@@ -22,5 +22,5 @@ class TeacherFactory(factory.DjangoModelFactory):
     first_name = factory.Faker("first_name")
     last_name = factory.Faker("last_name")
     email = factory.Faker("email")
-    phone_number = factory.LazyAttribute(lambda n: str(randint(11111, 55555)))
+    phone_number = factory.LazyAttribute(lambda n: str(randint(84123456, 8456789)))
 

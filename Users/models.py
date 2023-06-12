@@ -9,7 +9,6 @@ from users.managers import CustomUserManager
 class CustomUser(AbstractUser):
     username = None
     email = models.EmailField(_("email address"), unique=True)
-    school = models.ForeignKey(School, on_delete=models.CASCADE)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
