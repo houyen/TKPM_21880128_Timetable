@@ -42,9 +42,10 @@ INSTALLED_APPS = [
     "classrooms",
 ] + THIRD_PARTY_APPS
 
+# middleware/settings.py
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
-    "TKPM_21880128_Timetable.middleware.CmsLogin",
+    "TKPM_21880128_Timetable.middleware.CmsLogin", #middleware api bypass login
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -102,12 +103,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
 
 USE_I18N = True
 
 USE_TZ = True
 
+USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

@@ -17,7 +17,6 @@ TKPM_TX_HK2_2022.
 ### Hướng dẫn cài đặt
 * Install Python >= 3.8 on your Computer from the official website.
 
-
 * Run this command on your git terminal: 
     git clone “https://github.com/houyen/TKPM_21880128_Timetable.git”
 
@@ -31,6 +30,9 @@ TKPM_TX_HK2_2022.
 * Run this command to run server on your localhost:8000
     python manage.py runserver 
     python manage.py runserver _port # Nếu trường hợp trùng port đã sử dụng
+
+* Create superuser: 
+    python manage.py createsuperuser
 
 * Load data test
     python manage.py loaddata schools/fixtures/cms.json

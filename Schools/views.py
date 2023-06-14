@@ -9,8 +9,6 @@ class SchoolViewSet(ModelViewSet):
     queryset = School.objects.all()
     serializer_class = SchoolSerializer
     
-    def get_queryset(self):
-        pass
 
 class TeacherFilter(filters.FilterSet):
     class Meta:
@@ -30,7 +28,7 @@ class TeacherViewSet(ModelViewSet):
     filterset_class = TeacherFilter
 
     def get_queryset(self):
-        pass
-        # return self.queryset.filter(school=self.request.school)
+        # pass
+        return self.queryset.filter(school=self.request.school)
     
 
