@@ -37,3 +37,27 @@ TKPM_TX_HK2_2022.
 * Load data test
     python manage.py loaddata schools/fixtures/cms.json
     python manage.py loaddata classrooms/fixtures/cms.json
+
+*** REST APIs
+    ```REST là viết tắt của REpresentational State Transfer (dịch nôn na là chuyển trạng thái đại diện) là một kiểu kiến trúc lập trình, 
+nó định nghĩa các quy tắc để thiết kết các web service chú trọng vào tài nguyên hệ thống. 
+Trong kiến trúc REST mọi thứ đều được coi là tài nguyên, chúng có thể là: tệp văn bản, ảnh, trang html, video, hoặc dữ liệu động… 
+REST server cung cấp quyền truy cập vào các tài nguyên, REST client truy cập và thay đổi các tài nguyên đó. 
+Ở đây các tài nguyên được định danh dựa vào URI, REST sử dụng một vài đại diện để biểu diễn các tài nguyên như văn bản, JSON, XML.
+
+Taọ serializers.py và viewset trong view.py là file sẽ code thao tác để tạo được API.```
+
+* period: /api/v0/periods
+* list timetable for class of day:
+	 /?classroom=classroom_id&weekday=a, a = [0,5]
+	 /?classroom=classroom_id&date=yyyy-mm-dd
+* lịch dạy chi tiết của giáo viên vào 1 ngày cụ thể:
+	 /?date=yyyy-mm-dd&teacher=teacher_id
+* liệt kê các giáo viên có sẵn để thay thế trong một khoảng thời gian cụ thể:
+	 /period_id/free-teachers/?date=Y-m-d
+*  liệt kê thông tin chi tiết về việc điều chỉnh thời gian của period_id với subject_teacher_id
+	 /period_id/insights/?tsubject_eacher_id=subject_teacher_id&date=Y-m-d
+* điều chỉnh tiết dạy (period adjustment)
+	 /api/v0/period-adjustments
+* liệt kê tất cả các điều chỉnh thời gian trong ngày:
+	 /?date=Y-m-d
