@@ -13,7 +13,7 @@ class School(LogicalDeleteModel):
     code = models.CharField(max_length=5, unique=True)
     
     def __str__(self):
-        return F"{self.name}-{self.code}"
+        return F"{self.code}-{self.name}"
     
     
 class Teacher(LogicalDeleteModel):

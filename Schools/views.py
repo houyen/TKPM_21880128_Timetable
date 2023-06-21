@@ -5,11 +5,6 @@ from schools.models import Teacher, School
 from schools.serializers import TeacherSerializer, SchoolSerializer
 
 
-class SchoolViewSet(ModelViewSet):
-    queryset = School.objects.all()
-    serializer_class = SchoolSerializer
-    
-
 class TeacherFilter(filters.FilterSet):
     class Meta:
         model = Teacher
@@ -28,7 +23,10 @@ class TeacherViewSet(ModelViewSet):
     filterset_class = TeacherFilter
 
     def get_queryset(self):
-        # pass
-        return self.queryset.filter(school=self.request.school)
+        # return self.queryset.filter(school=self.request.school)
+        return self.queryset.filter()
     
 
+class SchoolViewSet(ModelViewSet):
+    queryset = School.objects.all()
+    serializer_class = SchoolSerializer

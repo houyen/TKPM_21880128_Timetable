@@ -7,7 +7,7 @@ from classrooms.models import (
     Subject,
     PeriodAdjustment,
 )
-from schools.serializers import TeacherSerializer
+from schools.serializers import TeacherSerializer, SchoolSerializer
 
 
 class ClassRoomSerializer(serializers.ModelSerializer):

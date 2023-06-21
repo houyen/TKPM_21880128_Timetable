@@ -34,8 +34,7 @@ class ClassRoomViewSet(ModelViewSet):
     serializer_class = ClassRoomSerializer
 
     def get_queryset(self):
-        # pass
-        return self.queryset.filter(school=self.request.school)
+        return self.queryset.filter()
 
 
 class SubjectViewSet(ModelViewSet):
@@ -49,7 +48,7 @@ class SubjectTeacherViewSet(ModelViewSet):
 
     def get_queryset(self):
         # pass
-        return self.queryset.filter(teacher__school=self.request.school)
+        return self.queryset.filter()
 
 
 class PeriodFilter(filters.FilterSet):
@@ -87,7 +86,7 @@ class PeriodViewSet(ModelViewSet):
 
     def get_queryset(self):
         # pass
-        return self.queryset.filter(classroom__school=self.request.school)
+        return self.queryset.filter()
 
     @action(
         detail=True,
@@ -155,4 +154,4 @@ class PeriodAdjustmentViewSet(ModelViewSet):
 
     def get_queryset(self):
         # pass
-        return self.queryset.filter(period__classroom__school=self.request.school)
+        return self.queryset.filter()
